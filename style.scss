@@ -1,0 +1,60 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+$bg-gray :  #e3e3e3;
+$bg-blue : #995bed ;
+$bg-white : white;
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-blue
+{
+    width : 100vw ;
+    height : 100vh;
+    background-color: $bg-blue;
+    @include flex;
+    .main
+    {
+        width : 330px;
+        border-radius: 10px;
+        box-shadow: 1px 0px 10px rgba(0,0,0,0.4);
+        background-color: $bg-white;
+        h1{
+            text-align : center;
+            color : $bg-gray;
+            padding : 30px;
+        }
+        @for $i from 1 through 4
+        {
+            .box#{$i}
+            {
+                width : 80%;
+                height : 30px;
+                margin : auto;
+                margin-top : 20px;
+                background-color: $bg-gray;
+            }
+        }
+        .box5
+        {
+            width : 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: auto;
+            margin-block : 20px;
+            background-color: $bg-gray;
+        }
+        .box6
+        {
+            width : 100px;
+            height : 30px;
+            background-color: $bg-gray;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+    }
+}
